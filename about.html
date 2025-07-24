@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/abe88cc625.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- daisy ui link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwin css link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #141414;
+        --color-secondary: #fff;
+        --font-inter: "Inter", sans-serif;
+        --font-space: "Space Grotesk", sans-serif;
+      }
+    </style>
+    <title>ThemeGhor AgencyPro</title>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <header>
+      <nav class="fixed w-full z-50 md:px-4">
+        <div class="navbar max-w-6xl w-full py-10 px-4 mx-auto justify-between">
+          <div class="px-4 md:px-0">
+           <a href="#" class="text-2xl font-inter">AgencyPro</a> 
+          </div>
+          <div class="navbar-center hidden lg:flex">
+             <ul class="menu font-inter text-lg menu-horizontal px-1">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+            </ul>
+          </div>
+          <div class="lg:navbar-end flex items-center gap-4">
+                  <a href="/contact.html"
+              class="px-4 py-1 hidden md:flex text-nowrap rounded-md font-inter text-lg bg-[#8659c0] text-secondary"
+              >Contact Us</a
+            >
+              <div class="drawer drawer-end text-end lg:hidden">
+              <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+              <div class="drawer-content">
+                <!-- Page content here -->
+                <label for="my-drawer-4" class="drawer-button bg-[#8659c0] text-secondary px-2 py-1 rounded-md"
+                  >Menu</label
+                >
+              </div>
+              <div class="drawer-side">
+                <label
+                  for="my-drawer-4"
+                  aria-label="close sidebar"
+                  class="drawer-overlay"
+                ></label>
+                 <ul
+                  class="menu bg-base-200 text-base-content h-full w-64 p-4"
+                >
+                  <!-- Sidebar content here -->
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+           </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar end -->
+    <main></main>
+    <footer></footer>
+    <script src=""></script>
+  </body>
+</html>
