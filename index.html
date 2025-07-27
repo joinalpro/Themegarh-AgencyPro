@@ -23,12 +23,38 @@
     />
     <!-- tailwin css link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- swiper slider css link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <style type="text/tailwindcss">
       @theme {
         --color-primary: #141414;
         --color-secondary: #fff;
+        --color-bg-primary: #8659c0;
         --font-inter: "Inter", sans-serif;
         --font-space: "Space Grotesk", sans-serif;
+      }
+      .clip-path {
+        clip-path: polygon(
+          0% 15%,
+          0 0,
+          15% 0%,
+          84% 0,
+          84% 19%,
+          100% 19%,
+          100% 85%,
+          100% 100%,
+          85% 100%,
+          15% 100%,
+          0 100%,
+          0% 85%
+        );
+      }
+      .text-shadow {
+        text-shadow: 1px 1px 2px black, 0 0 1em #8659c0, 0 0 0.2em #8659c0;
+        color: white;
       }
     </style>
     <title>ThemeGhor AgencyPro</title>
@@ -36,28 +62,33 @@
   <body>
     <!-- navbar start -->
     <header>
-      <nav class="fixed w-full z-50 md:px-4">
-        <div class="navbar max-w-6xl w-full py-10 px-4 mx-auto justify-between">
-          <div class="px-4 md:px-0">
-           <a href="#" class="text-2xl font-inter">AgencyPro</a> 
+      <nav class="fixed w-full z-50">
+        <div
+          class="navbar p-0 max-w-6xl px-4 lg:px-3 w-full py-10 mx-auto justify-between"
+        >
+          <div class="">
+            <a href="#" class="text-2xl font-inter">AgencyPro</a>
           </div>
           <div class="navbar-center hidden lg:flex">
-             <ul class="menu font-inter text-lg menu-horizontal px-1">
+            <ul class="menu font-inter text-lg menu-horizontal px-1">
               <li><a href="/index.html">Home</a></li>
               <li><a href="/about.html">About</a></li>
               <li><a href="/services.html">Services</a></li>
             </ul>
           </div>
           <div class="lg:navbar-end flex items-center gap-4">
-                  <a href="/contact.html"
-              class="px-4 py-1 hidden md:flex text-nowrap rounded-md font-inter text-lg bg-[#8659c0] text-secondary"
+            <a
+              href="/contact.html"
+              class="px-4 py-1 hidden md:flex text-nowrap rounded-md font-inter text-lg bg-bg-primary text-secondary"
               >Contact Us</a
             >
-              <div class="drawer drawer-end text-end lg:hidden">
+            <div class="drawer drawer-end text-end lg:hidden">
               <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
               <div class="drawer-content">
                 <!-- Page content here -->
-                <label for="my-drawer-4" class="drawer-button bg-[#8659c0] text-secondary px-2 py-1 rounded-md"
+                <label
+                  for="my-drawer-4"
+                  class="drawer-button bg-bg-primary text-secondary px-2 py-1 rounded-md"
                   >Menu</label
                 >
               </div>
@@ -67,66 +98,93 @@
                   aria-label="close sidebar"
                   class="drawer-overlay"
                 ></label>
-                 <ul
-                  class="menu bg-base-200 text-base-content h-full w-64 p-4"
-                >
+                <ul class="menu bg-base-200 text-base-content h-full w-64 p-4">
                   <!-- Sidebar content here -->
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/services.html">Services</a></li>
-              <li><a href="/contact.html">Contact Us</a></li>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/about.html">About</a></li>
+                  <li><a href="/services.html">Services</a></li>
+                  <li><a href="/contact.html">Contact Us</a></li>
                 </ul>
               </div>
-           </div>
+            </div>
           </div>
         </div>
       </nav>
-    </header>
-    <!-- navbar end -->
-    <main>
+      <!-- navbar end -->
+
       <!-- hero section start -->
-      <div class="flex flex-col relative h-[800px] lg:flex-row p-4">
-        <!-- left site context -->
+      <div class="px-4">
         <div
-          class="bg-gradient-to-r from-[#8659c0] to-[rgba(20, 20, 20, 0)] rounded-l-2xl w-full lg:max-w-1/2 flex flex-col lg:items-center px-4 lg:px-0 justify-center"
+          class="flex pb-2 lg:pb-0 relative flex-col lg:flex-row lg:bg-gradient-to-tr bg-gradient-to-t from-bg-primary from-0% via-white/30 via-30% to-white/30 to-90% rounded-2xl"
         >
-          <div class="mt-30 space-y-3">
-            <p class="font-inter text-[14px] font-medium text-primary md:mr-42">
-              BEST MARKETING AGENCY
-            </p>
-            <h1
-              class="md:text-7xl lg:max-w-[10ch] text-5xl font-space font-bold text-primary"
-            >
-              Digital marketing agency
-            </h1>
-            <div class="md:mr-42 mt-10">
-              <button
-                class="bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
-              >
-                Get in Touch <i class="fa-solid fa-arrow-right -rotate-45"></i>
-              </button>
-            </div>
-          </div>
+          <!-- left site context -->
           <div
-            class="flex flex-col md:flex-row gap-10 md:mt-20 mt-10 md:mr-30 mb-10"
+            class="w-full lg:max-w-1/2 flex flex-col lg:items-center justify-center"
           >
-            <div>
-              <h2 class="text-5xl font-space font-medium text-primary">95%</h2>
-              <p class="font-inter font-medium text-primary">
-                Clients Satisfied and <br />
-                Repeating
+            <div class="mt-30 lg:mt-50 my-10 space-y-3">
+              <p class="font-inter text-[14px] font-medium text-primary">
+                BEST MARKETING AGENCY
               </p>
-            </div>
-            <div>
-              <h2 class="text-5xl font-space font-medium text-primary">200%</h2>
-              <p class="font-inter font-medium text-primary">
-                Projects Completed <br />
-                in 24 Countries
-              </p>
+              <h1
+                class="md:text-7xl lg:max-w-[10ch] text-5xl font-space font-bold text-primary"
+              >
+                Digital marketing agency
+              </h1>
+              <div class="mt-10">
+                <button
+                  class="bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+                >
+                  Get in Touch
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </button>
+              </div>
+              <div class="flex flex-col md:flex-row gap-10 md:mt-20 mt-10">
+                <div>
+                  <h2 class="text-5xl font-space font-medium text-primary">
+                    95%
+                  </h2>
+                  <p class="font-inter font-medium text-primary">
+                    Clients Satisfied and <br />
+                    Repeating
+                  </p>
+                </div>
+                <div>
+                  <h2 class="text-5xl font-space font-medium text-primary">
+                    200%
+                  </h2>
+                  <p class="font-inter font-medium text-primary">
+                    Projects Completed <br />
+                    in 24 Countries
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- right site image -->
+          <div class="w-full relative">
+            <img
+              class="h-full w-full rounded-2xl"
+              src="/assets/image/image.png"
+              alt=""
+            />
+            <!-- say hi card -->
+            <div
+              class="absolute z-20 left-4 bottom-4 bg-white p-6 rounded-3xl clip-path"
+            >
+              <h1 class="uppercase text-shadow font-inter">say hi!</h1>
+              <h5 class="text-3xl mt-10 font-space font-bold max-w-[10ch]">
+                World-class digital media agency.
+              </h5>
+            </div>
+            <div
+              class="absolute bottom-50 left-56 z-50 bg-white shadow-lg rounded-full shadow-bg-primary rotate-45 size-10 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </div>
+          <!-- awarod rotated -->
           <div
-            class="flex flex-col absolute md:-bottom-10 bottom-0 left-40 md:left-96 lg-bottom-6 lg:bottom-4 lg:left-[540px] items-center space-y-20"
+            class="flex flex-col z-10 absolute bottom-0 left-40 md:left-96 lg:left-[540px] items-center space-y-20"
           >
             <p class="text-[12px] rotate-90 font-inter font-bold">
               AWARD WINNING AGENCY
@@ -134,18 +192,340 @@
             <div class="w-px h-10 bg-black"></div>
           </div>
         </div>
-        <!-- right site image -->
-        <div class="w-full">
-          <img
-            class="h-full w-full rounded-2xl"
-            src="/assets/image/image.png"
-            alt=""
-          />
-        </div>
       </div>
       <!-- hero section end -->
+    </header>
+    <main>
+      <section class="max-w-6xl w-full mx-auto px-4">
+        <!-- social marketing start -->
+        <section class="flex flex-col lg:flex-row justify-between mt-20">
+          <div class="lg:max-w-1/3 md:max-w-3/4 w-full lg:mx-auto relative">
+            <img
+              class="w-full object-center"
+              src="./assets/image/female.jpg"
+              alt=""
+            />
+            <div class="md:absolute bottom-0 -right-46 lg:-right-6">
+              <img class="w-full" src="./assets/image//calculator.jpg" alt="" />
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="lg:space-y-3 space-y-2 mt-4 lg:mt-0">
+              <p class="font-inter">About our Agency</p>
+              <h1 class="text-5xl font-bold font-space max-w-[14ch]">
+                Socail marketing & abertising.
+              </h1>
+            </div>
+            <p class="font-inter text-lg max-w-[40ch]">
+              We provide digital experience services to start up and small
+              businesses. We help our clients succeed by creating brand
+              identities, digital experiences, and print materials. Install any
+              demo, plugin or template in a matter of seconds.
+            </p>
+            <div>
+              <button
+                class="bg-bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+              >
+                More About Us
+                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+              </button>
+            </div>
+            <div class="flex">
+              <div class="border-t border-gray-300">
+                <div class="mr-4 mt-4">
+                  <h4 class="text-3xl font-bold font-space">4.9</h4>
+                  <p class="text-[15px] font-inter">( 24 review )</p>
+                </div>
+              </div>
+              <div class="border-t border-l border-gray-300">
+                <div class="ml-4 mt-4 space-y-1">
+                  <p class="font-inter text-sm font-medium">Average Rating</p>
+                  <i
+                    class="fa-solid fa-star text-sm bg-black text-white p-1"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star text-sm bg-black text-white p-1"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star text-sm bg-black text-white p-1"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star text-sm bg-black text-white p-1"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star text-sm bg-black text-white p-1"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- social marketing end -->
+
+        <!-- explore creative start -->
+        <section
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 mt-20 lg:mt-30"
+        >
+          <div class="space-y-4">
+            <h2 class="font-space font-bold text-3xl">
+              Explore the creative process
+            </h2>
+            <button
+              class="bg-bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+            >
+              <i class="fa-solid fa-phone-volume mr-2"></i>
+              Call For Joining
+            </button>
+          </div>
+          <div class="relative space-y-2">
+            <h1 class="text-[#cdbce7] text-5xl font-medium font-inter">01</h1>
+            <h4 class="text-2xl font-bold font-space absolute top-3 left-6">
+              Research
+            </h4>
+            <p class="font-inter text-sm ml-6 text-gray-500">
+              Focussed on understanding your business requirements, users and
+              problems
+            </p>
+          </div>
+          <div class="relative space-y-2">
+            <h1 class="text-[#cdbce7] text-5xl font-medium font-inter">02</h1>
+            <h4 class="text-2xl font-bold font-space absolute top-3 left-6">
+              Ideation & design
+            </h4>
+            <p class="font-inter text-sm ml-6 text-gray-500">
+              Focussed on understanding your business requirements, users and
+              problems
+            </p>
+          </div>
+          <div class="relative space-y-2">
+            <h1 class="text-[#cdbce7] text-5xl font-medium font-inter">03</h1>
+            <h4 class="text-2xl font-bold font-space absolute top-3 left-6">
+              Development
+            </h4>
+            <p class="font-inter text-sm ml-6 text-gray-500">
+              Focussed on understanding your business requirements, users and
+              problems
+            </p>
+          </div>
+        </section>
+        <!-- explore creative end -->
+      </section>
+      <!-- services and our exclusive -->
+      <section class="px-4 mt-20 lg:mt-30">
+        <!-- services growing sales start -->
+        <section class="bg-black rounded-2xl">
+          <div class="max-w-6xl w-full mx-auto px-4 py-12">
+            <div class="space-y-5">
+              <h5 class="font-inter text-white">SERIVCES</h5>
+              <h1
+                class="font-space font-bold text-2xl md:text-5xl max-w-[20ch] text-white"
+              >
+                Growing sales thorugh exceptional services
+              </h1>
+            </div>
+            <div class="space-y-4 mt-12">
+              <!-- 1 SEO -->
+              <div
+                class="flex flex-col lg:flex-row py-4 hover:px-4 transition-all duration-700 delay-300 md:items-center justify-between border-t border-b border-gray-400 space-y-4"
+              >
+                <p class="text-lg font-medium font-space text-white">01</p>
+                <h3
+                  class="text-3xl font-bold font-space lg:max-w-[3ch] text-white"
+                >
+                  SEO Marketing
+                </h3>
+                <p
+                  class="font-inter font-medium text-[17px] max-w-[40ch] text-gray-400"
+                >
+                  We immerse ourselves in your issues and we put our knowledge
+                  and experties at your service
+                </p>
+                <p
+                  class="flex shadow-lg items-center justify-center rounded-full shadow-bg-primary rotate-45 size-10"
+                >
+                  <i class="fa-solid fa-arrow-up text-white"></i>
+                </p>
+              </div>
+              <!-- 2 SOCIAL -->
+              <div
+                class="flex flex-col lg:flex-row py-4 hover:px-4 transition-all duration-700 delay-300 md:items-center justify-between border-t border-b border-gray-400 space-y-4"
+              >
+                <p class="text-lg font-medium font-space text-white">02</p>
+                <h3
+                  class="text-3xl font-bold font-space lg:max-w-[3ch] text-white"
+                >
+                  Socail Marketing
+                </h3>
+                <p
+                  class="font-inter font-medium text-[17px] max-w-[40ch] text-gray-400"
+                >
+                  We immerse ourselves in your issues and we put our knowledge
+                  and experties at your service
+                </p>
+                <p
+                  class="flex shadow-lg items-center justify-center rounded-full shadow-bg-primary rotate-45 size-10"
+                >
+                  <i class="fa-solid fa-arrow-up text-white"></i>
+                </p>
+              </div>
+              <!-- 3 CONTENT -->
+              <div
+                class="flex flex-col lg:flex-row py-4 hover:px-4 transition-all duration-700 delay-300 md:items-center justify-between border-t border-b border-gray-400 space-y-4"
+              >
+                <p class="text-lg font-medium font-space text-white">03</p>
+                <h3
+                  class="text-3xl font-bold font-space lg:max-w-[3ch] text-white"
+                >
+                  Content Marketing
+                </h3>
+                <p
+                  class="font-inter font-medium text-[17px] max-w-[40ch] text-gray-400"
+                >
+                  We immerse ourselves in your issues and we put our knowledge
+                  and experties at your service
+                </p>
+                <p
+                  class="flex shadow-lg items-center justify-center rounded-full shadow-bg-primary rotate-45 size-10"
+                >
+                  <i class="fa-solid fa-arrow-up text-white"></i>
+                </p>
+              </div>
+              <!-- 4 EMAIL -->
+              <div
+                class="flex flex-col lg:flex-row py-4 hover:px-4 transition-all duration-700 delay-300 md:items-center justify-between border-t border-b border-gray-400 space-y-4"
+              >
+                <p class="text-lg font-medium font-space text-white">04</p>
+                <h3
+                  class="text-3xl font-bold font-space lg:max-w-[3ch] text-white"
+                >
+                  Email Marketing
+                </h3>
+                <p
+                  class="font-inter font-medium text-[17px] max-w-[40ch] text-gray-400"
+                >
+                  We immerse ourselves in your issues and we put our knowledge
+                  and experties at your service
+                </p>
+                <p
+                  class="flex shadow-lg items-center justify-center rounded-full shadow-bg-primary rotate-45 size-10"
+                >
+                  <i class="fa-solid fa-arrow-up text-white"></i>
+                </p>
+              </div>
+            </div>
+            <!-- services growing sales end -->
+
+            <!-- Our exclusive start -->
+            <div
+              class="flex flex-col lg:flex-row justify-between space-y-5 mt-10 lg:mt-20"
+            >
+              <h1
+                class="font-space font-bold max-w-[15ch] lg:max-w-[10ch] text-2xl md:text-5xl text-white"
+              >
+                Our exclusive Case, studies
+              </h1>
+              <p
+                class="font-inter font-medium text-[17px] lg:max-w-[42ch] text-gray-400"
+              >
+                Our design sevices starts and ends with a best-in class
+                exprerience startegy that builds to provide you with an informed
+                response.
+              </p>
+              <div class="flex gap-5">
+                <button
+                  id="swiperPrev"
+                  class="flex shadow-lg items-center justify-center rounded-full shadow-bg-primary size-10"
+                >
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
+                <button
+                  id="swiperNext"
+                  class="flex shadow-lg items-center justify-center rounded-full shadow-bg-primary size-10"
+                >
+                  <i class="fa-solid fa-arrow-left text-white"></i>
+                </button>
+              </div>
+            </div>
+            <!-- swiper slider start -->
+            <div class="swiper mt-10">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="rounded-lg"
+                    src="/assets/image/social.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-lg" src="/assets/image/seo.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/image/content.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/image/digital.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/image/email.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- swiper slider end -->
+            <div class="text-center space-y-3 mt-8">
+              <h1 class="font-space font-bold text-2xl md:text-5xl text-white">
+                Abocado Cutter
+              </h1>
+              <p class="font-inter font-medium text-[17px] text-gray-300">
+                DIGITAL MARKETING
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Our exclusive end -->
+      </section>
+      <!-- team member start -->
+      <section class="max-w-6xl w-full mx-auto px-4 mt-10 lg:mt-20">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div>
+            <p class="font-inter">Team Member</p>
+            <h2 class="font-space font-bold text-2xl md:text-5xl max-w-[12ch]">
+              Mett hte talented team
+            </h2>
+          </div>
+          <div>
+            <button
+              class="bg-bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+            >
+              All Team Member
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-4 gap-4">
+          <div>
+            <img src="./assets/team/team1.jpg" alt="">
+            <h4 class="font-space font-bold text-xl">Ethan Roberts</h4>
+            <p class="text-inter text-sm text-gray-600">Marketing Leader</p>
+          </div>
+        </div>
+      </section>
+      <!-- team member end -->
     </main>
     <footer></footer>
-    <script src=""></script>
+    <!-- swiper slider main.js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>
