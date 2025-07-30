@@ -36,22 +36,6 @@
         --font-inter: "Inter", sans-serif;
         --font-space: "Space Grotesk", sans-serif;
       }
-      .clip-path {
-        clip-path: polygon(
-          0% 15%,
-          0 0,
-          15% 0%,
-          84% 0,
-          84% 19%,
-          100% 19%,
-          100% 85%,
-          100% 100%,
-          85% 100%,
-          15% 100%,
-          0 100%,
-          0% 85%
-        );
-      }
       .text-shadow {
         text-shadow: 1px 1px 2px black, 0 0 1em #8659c0, 0 0 0.2em #8659c0;
         color: white;
@@ -62,11 +46,11 @@
   <body>
     <!-- navbar start -->
     <header>
-      <nav class="fixed w-full z-50">
+      <nav class="fixed w-full z-50 bg-white/30 backdrop-blur-sm">
         <div
-          class="navbar p-0 max-w-6xl px-4 lg:px-3 w-full py-10 mx-auto justify-between"
+          class="navbar p-0 max-w-6xl px-4 lg:px-3 w-full mx-auto justify-between"
         >
-          <div class="">
+          <div>
             <a href="#" class="text-2xl font-inter">AgencyPro</a>
           </div>
           <div class="navbar-center hidden lg:flex">
@@ -98,7 +82,7 @@
                   aria-label="close sidebar"
                   class="drawer-overlay"
                 ></label>
-                <ul class="menu bg-base-200 text-base-content h-full w-64 p-4">
+                <ul class="menu bg-base-200 font-inter text-lg text-base-content h-full w-64 p-4">
                   <!-- Sidebar content here -->
                   <li><a href="/index.html">Home</a></li>
                   <li><a href="/about.html">About</a></li>
@@ -132,7 +116,7 @@
               </h1>
               <div class="mt-10">
                 <button
-                  class="bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+                  class="bg-primary cursor-pointer text-secondary font-inter font-semibold px-6 py-2 rounded-md"
                 >
                   Get in Touch
                   <i class="fa-solid fa-arrow-right -rotate-45"></i>
@@ -161,10 +145,10 @@
             </div>
           </div>
           <!-- right site image -->
-          <div class="w-full relative">
+          <div class="w-full  relative">
             <img
               class="h-full w-full rounded-2xl"
-              src="/assets/image/image.png"
+              src="/assets/image/head.png"
               alt=""
             />
             <!-- say hi card -->
@@ -176,11 +160,12 @@
                 World-class digital media agency.
               </h5>
             </div>
-            <div
-              class="absolute bottom-50 left-56 z-50 bg-white shadow-lg rounded-full shadow-bg-primary rotate-45 size-10 flex items-center justify-center"
+            <a
+              href="#"
+              class="absolute bottom-54 left-60 z-50 bg-white shadow-lg rounded-full shadow-bg-primary rotate-45 size-10 flex items-center justify-center"
             >
               <i class="fa-solid fa-arrow-up"></i>
-            </div>
+            </a>
           </div>
           <!-- awarod rotated -->
           <div
@@ -201,15 +186,15 @@
         <section class="flex flex-col lg:flex-row justify-between mt-20">
           <div class="lg:max-w-1/3 md:max-w-3/4 w-full lg:mx-auto relative">
             <img
-              class="w-full object-center"
-              src="./assets/image/female.jpg"
+              class="w-full md:h-[500px] rounded-t-2xl md:rounded-2xl object-cover"
+              src="./assets/image/disital.jpg"
               alt=""
             />
-            <div class="md:absolute bottom-0 -right-46 lg:-right-6">
-              <img class="w-full" src="./assets/image//calculator.jpg" alt="" />
+            <div class="md:absolute bottom-0 -right-46 lg:-right-12">
+              <img class="rounded-b-2xl w-full md:rounded-2xl" src="./assets/image/pay.png" alt="" />
             </div>
           </div>
-          <div class="space-y-6">
+          <div class="space-y-8">
             <div class="lg:space-y-3 space-y-2 mt-4 lg:mt-0">
               <p class="font-inter">About our Agency</p>
               <h1 class="text-5xl font-bold font-space max-w-[14ch]">
@@ -224,13 +209,13 @@
             </p>
             <div>
               <button
-                class="bg-bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+                class="bg-bg-primary cursor-pointer text-secondary font-inter font-semibold px-6 py-2 rounded-md"
               >
                 More About Us
                 <i class="fa-solid fa-arrow-right -rotate-45"></i>
               </button>
             </div>
-            <div class="flex">
+            <div class="flex mt-12">
               <div class="border-t border-gray-300">
                 <div class="mr-4 mt-4">
                   <h4 class="text-3xl font-bold font-space">4.9</h4>
@@ -271,7 +256,7 @@
               Explore the creative process
             </h2>
             <button
-              class="bg-bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+              class="bg-bg-primary cursor-pointer text-secondary font-inter font-semibold px-6 py-2 rounded-md"
             >
               <i class="fa-solid fa-phone-volume mr-2"></i>
               Call For Joining
@@ -447,7 +432,8 @@
               </div>
             </div>
             <!-- swiper slider start -->
-            <div class="swiper mt-10">
+            <div class="mt-10">
+              <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img
@@ -455,9 +441,25 @@
                     src="/assets/image/social.png"
                     alt=""
                   />
+                   <div class="text-center space-y-3 mt-8">
+              <h1 class="font-space font-bold text-2xl md:text-4xl text-white">
+                Abocado Cutter
+              </h1>
+              <p class="font-inter font-medium text-[17px] text-gray-300">
+                DIGITAL MARKETING
+              </p>
+            </div>
                 </div>
                 <div class="swiper-slide">
                   <img class="rounded-lg" src="/assets/image/seo.jpg" alt="" />
+                   <div class="text-center space-y-3 mt-8">
+              <h1 class="font-space font-bold text-2xl md:text-4xl text-white">
+                Abocado Cutter
+              </h1>
+              <p class="font-inter font-medium text-[17px] text-gray-300">
+                DIGITAL MARKETING
+              </p>
+            </div>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -465,6 +467,14 @@
                     src="./assets/image/content.png"
                     alt=""
                   />
+                   <div class="text-center space-y-3 mt-8">
+              <h1 class="font-space font-bold text-2xl md:text-4xl text-white">
+                Abocado Cutter
+              </h1>
+              <p class="font-inter font-medium text-[17px] text-gray-300">
+                DIGITAL MARKETING
+              </p>
+            </div>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -472,6 +482,14 @@
                     src="./assets/image/digital.jpg"
                     alt=""
                   />
+                   <div class="text-center space-y-3 mt-8">
+              <h1 class="font-space font-bold text-2xl md:text-4xl text-white">
+                Abocado Cutter
+              </h1>
+              <p class="font-inter font-medium text-[17px] text-gray-300">
+                DIGITAL MARKETING
+              </p>
+            </div>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -479,51 +497,407 @@
                     src="./assets/image/email.jpg"
                     alt=""
                   />
-                </div>
-              </div>
-            </div>
-            <!-- swiper slider end -->
-            <div class="text-center space-y-3 mt-8">
-              <h1 class="font-space font-bold text-2xl md:text-5xl text-white">
+                   <div class="text-center space-y-3 mt-8">
+              <h1 class="font-space font-bold text-2xl md:text-4xl text-white">
                 Abocado Cutter
               </h1>
               <p class="font-inter font-medium text-[17px] text-gray-300">
                 DIGITAL MARKETING
               </p>
             </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- swiper slider end -->
+           
           </div>
         </section>
         <!-- Our exclusive end -->
       </section>
       <!-- team member start -->
-      <section class="max-w-6xl w-full mx-auto px-4 mt-10 lg:mt-20">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div>
-            <p class="font-inter">Team Member</p>
-            <h2 class="font-space font-bold text-2xl md:text-5xl max-w-[12ch]">
+      <section class="max-w-6xl w-full mx-auto px-4 lg:px-3 mt-10 lg:mt-20">
+        <div
+          class="flex flex-col space-y-5 md:space-y-0 md:flex-row justify-between md:items-center"
+        >
+          <div class="space-y-2 md:space-y-0">
+            <p class="font-inter mb-3">Team Member</p>
+            <h2
+              class="font-space font-bold text-4xl md:text-5xl md:max-w-[12ch]"
+            >
               Mett hte talented team
             </h2>
           </div>
-          <div>
+          <div class="md:pt-16">
             <button
-              class="bg-bg-primary text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+              class="bg-bg-primary cursor-pointer text-secondary font-inter font-semibold px-6 py-2 rounded-md"
             >
               All Team Member
               <i class="fa-solid fa-arrow-right -rotate-45"></i>
             </button>
           </div>
         </div>
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+          <!-- image 01 -->
           <div>
-            <img src="./assets/team/team1.jpg" alt="">
-            <h4 class="font-space font-bold text-xl">Ethan Roberts</h4>
-            <p class="text-inter text-sm text-gray-600">Marketing Leader</p>
+            <img class="w-full" src="./assets/team/team1.jpg" alt="" />
+            <div class="mt-3">
+              <h4 class="font-space font-bold text-xl">Ethan Roberts</h4>
+              <p class="text-inter text-sm text-gray-600">Marketing Leader</p>
+            </div>
+            <div class="flex gap-2 mt-3">
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-facebook-f text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-x-twitter text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-linkedin-in text-xs"></i>
+              </p>
+            </div>
+          </div>
+          <!-- image 02 -->
+          <div>
+            <img class="w-full" src="./assets/team/team5.jpg" alt="" />
+            <div class="mt-3">
+              <h4 class="font-space font-bold text-xl">Alex Jamie</h4>
+              <p class="text-inter text-sm text-gray-600">Marketing Leader</p>
+            </div>
+            <div class="flex gap-2 mt-3">
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-facebook-f text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-x-twitter text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-linkedin-in text-xs"></i>
+              </p>
+            </div>
+          </div>
+          <!-- image 03 -->
+          <div>
+            <img class="w-full" src="./assets/team/team3.jpg" alt="" />
+            <div class="mt-3">
+              <h4 class="font-space font-bold text-xl">Taylor Same</h4>
+              <p class="text-inter text-sm text-gray-600">Marketing Leader</p>
+            </div>
+            <div class="flex gap-2 mt-3">
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-facebook-f text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-x-twitter text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-linkedin-in text-xs"></i>
+              </p>
+            </div>
+          </div>
+          <!-- image 04 -->
+          <div>
+            <img class="w-full" src="./assets/team/team4.jpg" alt="" />
+            <div class="mt-3">
+              <h4 class="font-space font-bold text-xl">Ethan Roberts</h4>
+              <p class="text-inter text-sm text-gray-600">Marketing Leader</p>
+            </div>
+            <div class="flex gap-2 mt-3">
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-facebook-f text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-x-twitter text-xs"></i>
+              </p>
+              <p
+                class="flex bg-white hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-300 border items-center justify-center rounded-full shadow-bg-primary size-8"
+              >
+                <i class="fa-brands fa-linkedin-in text-xs"></i>
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <!-- team member end -->
+
+      <!-- brand logo start -->
+      <section class="mt-10 lg:mt-20 px-4">
+        <div class="border-t border-gray-300">
+           <div class="swiper swiperTwo">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide border-r border-gray-300 py-8">
+                <img class="mx-auto h-8" src="./assets/logo/logo1.png" alt="" />
+              </div>
+              <div class="swiper-slide border-r border-gray-300 py-8">
+                <img class="mx-auto h-8" src="./assets/logo/logo2.png" alt="" />
+              </div>
+              <div class="swiper-slide border-r border-gray-300 py-8">
+                <img class="mx-auto h-8" src="./assets/logo/logo3.png" alt="" />
+              </div>
+              <div class="swiper-slide border-r border-gray-300 py-8">
+                <img class="mx-auto h-8" src="./assets/logo/logo4.png" alt="" />
+              </div>
+              <div class="swiper-slide border-r border-gray-300 py-8">
+                <img class="mx-auto h-8" src="./assets/logo/logo5.png" alt="" />
+              </div>
+              <div class="swiper-slide border-r border-gray-300 py-8">
+                <img class="mx-auto h-8" src="./assets/logo/logo6.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- brand logo start -->
+      <!-- testimonials start -->
+      <section class="md:px-4">
+        <div class="mx-auto">
+         
+          <!-- image and content site -->
+          <div class="bg-gradient-to-tl from-bg-primary from-0% via-white/30 via-30% to-white/30 to-90% rounded-br-2xl">
+            <div class="flex flex-col justify-center items-center gap-4 lg:flex-row">
+              <!-- image left site -->
+              <div
+                class="hero h-96 lg:h-[550px] w-full rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl"
+                style="background-image: url(./assets/logo/teamv.png)"
+              >
+                <div class="hero-overlay rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl"></div>
+                <div class="relative group size-16 flex items-center justify-center">
+                  <!-- Ripple Effect -->
+                  <span
+                    class="absolute h-full w-full rounded-full bg-white opacity-20 delay-300 duration-700 animate-ping"
+                  >
+                  </span>
+                  <div class="group-hover:scale-110 delay-300 cursor-pointer duration-700">
+                    <img
+                    class="bg-white p-2 rounded-full"
+                    src="./assets/logo/icon.png"
+                    alt=""
+                  />
+                  </div>
+                </div>
+              </div>
+              <!-- content right site -->
+              <div
+                class="lg:max-w-[670px] w-full"
+              >
+                <div class="flex flex-col justify-center items-center space-y-4 mt-10">
+                  <p class="text-lg font-inter text-gray-600">TESTIMONIALS</p>
+                  <h1 class="font-bold font-space text-4xl md:text-5xl max-w-[15ch] text-center">
+                    What clients say about us
+                  </h1>
+                </div>
+                <div class="swiper mySwiper rounded-xl overflow-hidden mt-5">
+                  <div class="swiper-wrapper md:py-10 py-5">
+                    <!-- 01 testimonial -->
+                    <div class="swiper-slide">
+                      <div class="flex flex-col items-center justify-center space-y-4">
+                        <i class="fa-solid fa-quote-right text-4xl"></i>
+                       <p class="text-xl font-space w-[85%] md:max-w-[41ch]  text-center">We will help you identify you target market develop a marketing plan, and grow your customer base. We are committed to helping you succeed, and we will work with you every step of the awy.</p>
+                       <div class="flex gap-4">
+                        <img class="size-12 object-cover rounded-full" src="./assets/team/team3.jpg" alt="">
+                        <div>
+                          <h5 class="font-bold font-space text-lg">Leslie Alexander</h5>
+                          <p class="text-[#525356] font-inter">CEO at Specter</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <!-- 02 testimonial -->
+                    <div class="swiper-slide">
+                      <div class="flex flex-col items-center justify-center space-y-4">
+                        <i class="fa-solid fa-quote-right text-4xl"></i>
+                       <p class="text-xl font-space w-[85%] md:max-w-[41ch] text-center">We will help you identify you target market develop a marketing plan, and grow your customer base. We are committed to helping you succeed, and we will work with you every step of the awy.</p>
+                       <div class="flex gap-4">
+                        <img class="size-12 object-cover rounded-full" src="./assets/team/team3.jpg" alt="">
+                        <div>
+                          <h5 class="font-bold font-space text-lg">Leslie Alexander</h5>
+                          <p class="text-[#525356] font-inter">CEO at Specter</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <!-- 03 testimonial -->
+                    <div class="swiper-slide">
+                      <div class="flex flex-col items-center justify-center space-y-4">
+                        <i class="fa-solid fa-quote-right text-4xl"></i>
+                       <p class="text-xl font-space w-[85%] md:max-w-[41ch] text-center">We will help you identify you target market develop a marketing plan, and grow your customer base. We are committed to helping you succeed, and we will work with you every step of the awy.</p>
+                       <div class="flex gap-4">
+                        <img class="size-12 object-cover rounded-full" src="./assets/team/team3.jpg" alt="">
+                        <div>
+                          <h5 class="font-bold font-space text-lg">Leslie Alexander</h5>
+                          <p class="text-[#525356] font-inter">CEO at Specter</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+            </div>
+          </div>
+          </div>
+      </section>
+      <!-- testimonials end -->
+
+      <!-- the latest industry start -->
+       <section class="max-w-6xl w-full mx-auto px-4 lg:px-3 mt-10 lg:mt-20">
+        <div class="flex flex-col md:flex-row justify-between md:items-center space-y-4 md:space-y-0">
+          <h1 class="text-4xl md:text-5xl font-space font-bold max-w-[12ch]">The latest industry trends</h1>
+           <div  class="md:pt-16">
+            <button
+              class="bg-bg-primary cursor-pointer text-secondary font-inter font-semibold px-6 py-2 rounded-md"
+            >
+              Read All Posts
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </button>
+           </div>
+        </div>
+        <div>
+          <!-- marketing 01 -->
+        <div class="border-t group overflow-hidden border-gray-300 grid md:grid-cols-2 lg:grid-cols-3 py-8 mt-10">
+          <div>
+            <h4 class="font-bold text-xl font-space">Damien Cabral</h4>
+            <p class="text-[#4d5051] font-inter">Dec 10, 2025</p>
+            <div class="lg:mt-34 mt-8">
+              <button class="font-inter text-sm bg-purple-200 rounded px-2 py-0.5">Marketing</button>
+            </div>
+          </div>
+          <p class="text-xl font-bold font-space text-[#141414] max-w-[25ch] lg:max-w-[18ch] mt-4 md:mt-0">Simplicity is process the obvious and adding meaningful.</p>
+            <div class="mt-4 lg:mt-0 overflow-hidden">
+              <img class="group-hover:scale-110 duration-700 group-hover:skew-y-3 delay-300" src="./assets/team/team8.jpg" alt="">
+            </div>
+        </div>
+        <!-- design 02 -->
+       <div class="border-t group overflow-hidden border-gray-300 grid md:grid-cols-2 lg:grid-cols-3 py-8">
+          <div>
+            <h4 class="font-bold text-xl font-space">Elvin Bond</h4>
+            <p class="text-[#4d5051] font-inter">Sep 3, 2025</p>
+            <div class="lg:mt-34 mt-8">
+              <button class="font-inter text-sm bg-purple-200 rounded px-2 py-0.5">Design</button>
+            </div>
+          </div>
+          <p class="text-xl font-bold font-space text-[#141414] max-w-[25ch] lg:max-w-[18ch] mt-4 md:mt-0">Design can speak the in tongue of art force of commerce.</p>
+            <div class="mt-4 lg:mt-0 overflow-hidden">
+              <img class="group-hover:scale-110 duration-700 delay-300 group-hover:skew-y-3" src="./assets/team/team2.jpg" alt="">
+            </div>
+        </div>
+        <!-- business 03 -->
+        <div class="border-t border-b group overflow-hidden border-gray-300 grid md:grid-cols-2 lg:grid-cols-3 py-8">
+          <div>
+            <h4 class="font-bold text-xl font-space">Ronald Lara</h4>
+            <p class="text-[#4d5051] font-inter">Aug 3, 2025</p>
+            <div class="lg:mt-34 mt-8">
+              <button class="font-inter text-sm bg-purple-200 rounded px-2 py-0.5">Business</button>
+            </div>
+          </div>
+          <p class="text-xl font-bold font-space text-[#141414] max-w-[28ch] lg:max-w-[18ch] mt-4 md:mt-0">Simplicity is removing the excess and focusing on what truly matters.</p>
+            <div class="mt-4 lg:mt-0 overflow-hidden">
+              <img class="group-hover:scale-110 duration-700 delay-300 group-hover:skew-y-3" src="./assets/team/team6.jpg" alt="">
+            </div>
+        </div>
+        </div>
+       </section>
+      <!-- the latest industry end -->
     </main>
-    <footer></footer>
+    <footer 
+    class="bg-gradient-to-r rounded-2xl lg:mx-4 from-[#121212] lg:from-[#212121] from-30% via-[#121212] via-30% to-[#121212] to-90% mt-10 lg:mt-20">
+      <div class="max-w-6xl w-full mx-auto px-4 lg:px-3 py-10">
+      <div class="grid md:grid-cols-7 lg:grid-cols-9 space-y-8">
+     <aside class="lg:col-span-3 md:col-span-3">
+    <a href="#" class="text-2xl font-inter text-white">AgencyPro</a>
+    <p class="font-inter font-medium max-w-[25ch] text-gray-300 mt-3">
+      We are committed to helping you succeed, and we will work with you every step of the way.
+    </p>
+    <div class="flex gap-2 mt-6">
+      <p
+        class="flex hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-700 border-2 items-center justify-center rounded-full shadow-bg-primary size-10"
+      >
+        <i class="fa-brands fa-facebook-f text-lg"></i>
+      </p>
+      <p
+        class="flex hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-700 border-2 items-center justify-center rounded-full shadow-bg-primary size-10"
+      >
+        <i class="fa-brands fa-x-twitter text-lg"></i>
+      </p>
+      <p
+        class="flex hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-700 border-2 items-center justify-center rounded-full shadow-bg-primary size-10"
+      >
+        <i class="fa-brands fa-linkedin-in text-lg"></i>
+      </p>
+      <p
+        class="flex hover:bg-[#8659c0] hover:border-[#8659c0] delay-300 duration-700 transition-all cursor-pointer text-gray-400 border-gray-700 border-2 items-center justify-center rounded-full shadow-bg-primary size-10"
+      >
+       <i class="fa-brands fa-instagram text-lg"></i>
+      </p>
+    </div>
+  </aside>
+  <!-- services -->
+  <nav class="space-y-3 lg:col-span-2 col-span-2">
+    <h6 class="text-white font-space font-bold text-2xl">Services</h6>
+    <ul class="text-gray-400 flex flex-col font-inter space-y-3">
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">UI/UX Design</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Web Design</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Branding</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Webflow</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Development</a>
+    </ul>
+  </nav>
+  <!-- Company -->
+  <nav class="space-y-3 lg:col-span-2 col-span-2">
+    <h6 class="text-white font-space font-bold text-2xl">Company</h6>
+    <ul class="text-gray-400 flex flex-col font-inter space-y-3">
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Home</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Agency</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Achievement</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Webflow</a>
+    <a class="link link-hover duration-700 delay-300 hover:text-[#8659c0]">Contact Us</a>
+    </ul>
+  </nav>
+  <!-- Newsletter -->
+  <nav class="space-y-3 lg:col-span-2 md:col-span-3 md:mt-4 lg:mt-0">
+    <h6 class="text-white font-space font-bold text-2xl">Newsletter</h6>
+    <p class="font-inter text-gray-400 w-[30ch]">Subscribe our newsletter to get the
+latest news and updates!</p>
+    <input class="outline-none rounded-lg font-inter text-[15px] bg-[#212121] py-2 px-6 max-w-full placeholder:text-gray-400" type="email" name="" id="" placeholder="Enter your email">
+  </nav>
+      </div>
+      </div>
+      <!-- footer bottom site -->
+      <div class="bg-gradient-to-r from-[#121212] lg:from-[#212121] from-30% via-[#121212] via-30% to-[#121212] to-90%">
+    <aside class="max-w-6xl w-full mx-auto py-4">
+    <div class="grid md:grid-cols-12 font-inter items-center px-4 lg:px-3 border-t border-[#212121] py-4">
+      <p class="text-gray-400 md:col-span-6 lg:col-span-4 text-center md:text-start"> © 2025 <span class="text-white">Agntix</span>. All Rights Reserved.</p>
+      <div class="flex gap-5 mx-auto md:mx-0 lg:col-span-8 md:col-span-6 items-center md:justify-between text-gray-400">
+        <p class="hidden lg:flex">agntix@gmail.com</p>
+        <p>Privacy policy</p>
+        <p>Terms and conditions</p>
+      </div>
+    </div>
+  </aside>
+</div>
+    </footer>
     <!-- swiper slider main.js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>
